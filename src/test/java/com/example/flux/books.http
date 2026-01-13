@@ -1,0 +1,27 @@
+POST http://localhost:8080/api/books
+Accept: application/json
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="title"
+
+Clean Architecture
+--boundary
+Content-Disposition: form-data; name="author"
+
+Robert C. Martin
+--boundary
+Content-Disposition: form-data; name="year"
+
+2017
+--boundary
+Content-Disposition: form-data; name="cover"; filename="cover.jpg"
+Content-Type: image/jpeg
+
+< /home/ilgiz/Pictures/photo_2025-06-11_13-11-16.jpg
+--boundary
+Content-Disposition: form-data; name="file"; filename="kurs.pdf"
+Content-Type: application/pdf
+
+< /home/ilgiz/Pictures/kurs.pdf
+--boundary--
