@@ -1,7 +1,10 @@
+### Maven ###
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+
+### Maven Wrapper (KEEP IN GIT) ###
+# .mvn/wrapper/maven-wrapper.jar
+# mvnw
+# mvnw.cmd
 
 ### STS ###
 .apt_generated
@@ -13,7 +16,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -24,9 +27,9 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+### Gradle ###
 build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
@@ -37,10 +40,10 @@ build/
 logs/
 hs_err_pid*
 
-### Env files ###
+### Environment ###
 .env
 .env.*
-!.env.example
+
+
+### Local AI / tooling ###
 AGENTS.md
-mnvw
-mvnw.cmd
