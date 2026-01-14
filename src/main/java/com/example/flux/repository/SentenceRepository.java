@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface SentenceRepository extends JpaRepository<Sentence, Long> {
     List<Sentence> findByBookId(Long bookId);
+
 }

@@ -3,6 +3,7 @@ package com.example.flux.controller;
 
 import com.example.flux.dto.SentenceResponse;
 import com.example.flux.mapper.SentenceMapper;
+import com.example.flux.model.Sentence;
 import com.example.flux.service.SentenceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -27,5 +28,13 @@ public class SentenceController {
 
         return ResponseEntity.ok(sentenceService.getAllSentences(id).stream().map(sentenceMapper::toResponse).toList());
     }
+
+
+    @GetMapping("/{wordId}/word")
+    public ResponseEntity<SentenceResponse> getSentence(@PathVariable Long wordId) {
+        Sentence sentence = sentenceService.getSentenceByWordId(wordId);
+        return ResponseEntity.ok(sentenceMapper.toResponse(sentence));
+    }
+
 
 }

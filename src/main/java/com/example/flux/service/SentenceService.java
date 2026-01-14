@@ -7,4 +7,5 @@ import java.util.List;
 public interface SentenceService {
 
     List<Sentence> getAllSentences(Long bookId);
+    Sentence getSentenceByWordId(Long wordId);
 }
