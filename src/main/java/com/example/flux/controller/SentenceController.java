@@ -23,10 +23,10 @@ public class SentenceController {
     private final SentenceMapper sentenceMapper;
 
 
-    @GetMapping ("/{id}")
-    public ResponseEntity<List<SentenceResponse>> getAllSentences(@PathVariable Long id) {
+    @GetMapping ("/{bookId}")
+    public ResponseEntity<List<SentenceResponse>> getAllSentences(@PathVariable Long bookId) {
 
-        return ResponseEntity.ok(sentenceService.getAllSentences(id).stream().map(sentenceMapper::toResponse).toList());
+        return ResponseEntity.ok(sentenceService.getAllSentences(bookId).stream().map(sentenceMapper::toResponse).toList());
     }
 
 
