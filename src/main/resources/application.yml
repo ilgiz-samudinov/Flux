@@ -61,7 +61,7 @@ langchain4j:
     chat-model:
       api-key: ${GOOGLE_API_KEY}
       model-name: gemini-2.5-flash
-      log-requests-and-responses: true
+#      log-requests-and-responses: true
     streaming-chat-model:
       api-key: ${GOOGLE_API_KEY}
       model-name: gemini-2.5-flash
