@@ -14,7 +14,7 @@ public class TranslationServiceImpl implements TranslationService {
 
     public String translate(String text) {
         try {
-            TextResult result = deepLClient.translateText(text, null, "ru");
+            TextResult result = deepLClient.translateText(text, "en" , "ru");
             return result.getText();
         } catch (Exception e) {
             throw new RuntimeException("Ошибка перевода: " + e.getMessage(), e);
