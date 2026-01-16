@@ -24,7 +24,6 @@ public class AiTranslateServiceImpl implements AiTranslateService {
     private final WordService wordService;
     private final ChatModel chatModel;
 
-    // Можно внедрить ObjectMapper бином; здесь делаю локально для наглядности
     private final ObjectMapper objectMapper = new ObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
@@ -99,7 +98,6 @@ public class AiTranslateServiceImpl implements AiTranslateService {
         try {
             return objectMapper.readValue(json, AiTranslateResponseDto.class);
         } catch (Exception e) {
-            // Fallback: чтобы API не падал из-за одного кривого ответа модели
             return new AiTranslateResponseDto(
                     new AiTranslateResponseDto.WordDto(originalWord, List.of()),
                     new AiTranslateResponseDto.ContextMeaningDto(

@@ -13,20 +13,6 @@ spring:
     username: admin
     password: admin
 
-  ai:
-    openai:
-      api-key: ${PERPLEXITY_API_KEY}
-      base-url: https://api.perplexity.ai
-      chat:
-        completions-path: /chat/completions
-        options:
-          model: sonar-pro
-          temperature: 0.7
-      embedding:
-        enabled: false
-
-
-
 
   servlet:
     multipart:
@@ -51,9 +37,6 @@ minio:
 deepl:
   api:
     key: ${DEEPL_API_KEY}
-
-
-
 
 
 langchain4j:

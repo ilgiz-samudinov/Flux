@@ -1,7 +1,8 @@
-package com.example.flux.service;
+package com.example.flux.service.impl;
 
 import com.deepl.api.DeepLClient;
 import com.deepl.api.TextResult;
+import com.example.flux.service.TranslationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

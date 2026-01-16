@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-public class    FileObjectResponse {
+public class FileObjectResponse {
     private Long id;
 
     private String objectKey;
