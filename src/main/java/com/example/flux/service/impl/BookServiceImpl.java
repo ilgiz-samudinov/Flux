@@ -8,6 +8,7 @@ import com.example.flux.repository.BookRepository;
 import com.example.flux.service.FileService;
 import com.example.flux.service.BookService;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -88,7 +89,8 @@ public class BookServiceImpl implements BookService {
         Book book = bookRepository.findByIdWithSentences(id)
                 .orElseThrow(() -> new NotFoundException("Book not found"));
 
-        book.getSentences().forEach(s -> s.getWords().size());
+        book.getSentences()
+                .forEach(sentence -> Hibernate.initialize(sentence.getWords()));
         return book;
     }
 
