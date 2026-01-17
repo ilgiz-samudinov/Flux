@@ -18,10 +18,27 @@ spring:
     multipart:
       max-file-size: 50MB
       max-request-size: 50MB
+  ai:
+    openai:
+      api-key: ${PERPLEXITY_API_KEY}
+      base-url: https://api.perplexity.ai
+      chat:
+        completions-path: /chat/completions
+        options:
+          model: sonar-reasoning-pro
+          temperature: 0.0  # ← CRITICAL
+          response-format:
+            type: JSON_SCHEMA
+            strict: true    # ← Strict validation
+
 
 
 server:
   port: 8080
+
+
+
+
 
 minio:
   url: http://localhost:9000
