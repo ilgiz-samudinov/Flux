@@ -47,3 +47,6 @@ hs_err_pid*
 
 ### Local AI / tooling ###
 AGENTS.md
+
+### Local scratch ###
+src/main/java/com/example/flux/Main.java
